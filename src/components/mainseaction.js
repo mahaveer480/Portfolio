@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import github from "../assests/images/github.png"
 import youtube from "../assests/images/youtube.png"
 import social  from "../assests/images/social.png"
-import facebook from '../assests/images/facebook.png'
+import linkdin from '../assests/images/linkedin.png'
 
 
 
@@ -38,7 +38,7 @@ navigate('/cheat')
 <div id="main">
 <div className="container">
       <div className="circle-profile">
-       <a 
+       <a  id="links3"
        target="_main"
        href="https://github.com/mahaveer480">
         <img
@@ -46,31 +46,29 @@ navigate('/cheat')
 </a>
       </div>
 
-          <p style={{marginTop:"90%" ,textAlign:"center"}}>GitHub</p>
     </div>
     
     </div>
     <div id="main">
 <div className="container">
       <div className="circle-profile">
-       <a target="_main" href="https://www.instagram.com/ramanimahaveer/">
+       <a target="_main" id="links3" href="https://www.facebook.com/profile.php?id=100068646013228">
+        <img src={linkdin}alt="Profile"className="profile-img"/>   
+        </a>
+      </div>
+
+    </div>
+    
+    </div>
+    <div id="main">
+<div className="container">
+      <div className="circle-profile">
+       <a target="_main" id="links3" href="https://www.instagram.com/ramanimahaveer/">
         <img src={social}alt="Profile"className="profile-img"/>   
         </a>
       </div>
 
     </div>
-          <pre> Instagram</pre>
-    
-    </div><div id="main">
-<div className="container">
-      <div className="circle-profile">
-       <a target="_main" href="https://www.facebook.com/profile.php?id=100068646013228">
-        <img src={facebook}alt="Profile"className="profile-img"/>   
-        </a>
-      </div>
-
-    </div>
-          <pre>  facebook</pre>
     
     </div>
 </div>

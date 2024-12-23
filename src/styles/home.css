@@ -6,8 +6,77 @@ body {
     color: white;
     overflow-x: hidden;
 }
+/* Website Container */
+#websites {
+    width: 22%;
+    height: 250px;
+    margin: 40px;
+    border: 1px solid white;
+    background-color: rgba(255, 0, 0, 0);
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Keeps the image and h4 stacked vertically */
+    align-items: center;
+    justify-content: flex-end;
+}
 
-/* Navigation Bar */
+#websites div {
+    margin: 0;
+    padding: 0;
+}
+
+#allwebsites {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto a new line */
+    justify-content: space-around;
+}
+
+#websites h4 {
+    background-color: white;
+    color: black;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image Styling */
+#website-images {
+    width: 100%;
+    height: 220px;
+    object-fit: cover; /* Keeps the image aspect ratio intact */
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller devices */
+@media (max-width: 768px) {
+    #websites {
+        width: 45%; /* Adjust width to fit more items per row */
+        margin: 20px;
+    }
+
+    #allwebsites {
+        justify-content: center; /* Center items when space is limited */
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    #websites {
+        width: 90%; /* Take up most of the width on small screens */
+        margin: 10px;
+    }
+
+    #allwebsites {
+        justify-content: center;
+    }
+}
 
 /* Navigation Bar */
 nav {
@@ -114,10 +183,19 @@ nav .menu-toggle {
 .container {
   position:relative;
   width: 100px;
+  padding: 0px !important;
+  margin: 0px !important;
   display: flex !important;
   height: 80px;
   flex-direction: column !important;
   cursor: pointer;
+}
+
+
+#links3{
+width: 1000px;
+
+
 }
 
 .circle-profile {
@@ -125,8 +203,8 @@ nav .menu-toggle {
   top: 0;
   background-color: white;
   left: 0;
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   overflow: hidden;
 }

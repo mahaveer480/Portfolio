@@ -13,12 +13,12 @@ const Navbar = () => {
     <nav>
       <div className="logo">HIRE</div>
       <ul className={isMenuOpen ? "active" : ""}>
-        <li><a href="/cheats">Massage</a></li>
-        <li><a href="#work">Our Work</a></li>
-        <li><a href="#customers">Customers</a></li>
-        <li><a href="#about">About Us</a></li>
+        <li><a href="/cheat">Chat With Me</a></li>
+        <li><a href="/websites">Websites</a></li>
+        <li><a href="artworks">Art Works</a></li>
+        <li><a href="about">About Us</a></li>
       </ul>
-      <button className="cta-button">Start Project</button>
+      <a href="https://www.fiverr.com/s/8zmw6pE"><button className="cta-button" >Start Project</button></a>
       <div className="menu-toggle" onClick={toggleMenu}>
         &#9776; {/* Hamburger icon */}
       </div>

@@ -7,6 +7,7 @@ export default function cheatBox() {
       <Navbar1/>
       <br /><br /><br />
       cheat box
+      
     </div>
   )
 }
