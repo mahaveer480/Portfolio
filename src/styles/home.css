@@ -1,0 +1,385 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: #000;
+    position: relative;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #32CD32;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #32CD32;
+}
+
+nav .cta-button {
+    background-color: #32CD32;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+nav .cta-button:hover {
+    background-color: #28A745;
+    transform: scale(1.05);
+}
+
+nav .menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav {
+        padding: 10px 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #000;
+        padding: 20px;
+        border-radius: 10px;
+        width: 200px; /* Set width for mobile menu */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav .menu-toggle {
+        display: block;
+    }
+}
+
+/* Small Screen Adjustments */
+@media (max-width: 480px) {
+    nav .cta-button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+.container {
+  position:relative;
+  width: 100px;
+  display: flex !important;
+  height: 80px;
+  flex-direction: column !important;
+  cursor: pointer;
+}
+
+.circle-profile {
+  position: absolute;
+  top: 0;
+  background-color: white;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.circle-text {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.rotating-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: rotate(15deg);
+}
+
+.rotating-text span {
+  position: absolute;
+  white-space: nowrap;
+  transform-origin: center;
+}
+
+.play-button {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 10px solid #fff;
+}
+
+
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: #000;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #32CD32;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #32CD32;
+}
+
+nav .cta-button {
+    background-color: #32CD32;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+nav .cta-button:hover {
+    background-color: #28A745;
+    transform: scale(1.05);
+}
+
+nav .menu-toggle {
+    display: none;
+}
+
+/* Main Section */
+.main-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.text-content {
+    max-width: 50%;
+}
+
+.text-content h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.text-content h1 span.highlight {
+    background-color: #32CD32;
+    color: black;
+    padding: 5px 5px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.text-content .circular-text {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #888;
+}
+
+.image-section {
+    position: relative;
+    width: 40%;
+    /* height: 800px; */
+    /* background: linear-gradient(135deg, #32CD32, #D4FFD4); */
+    border-radius: 20px;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text-content{
+display: flex;
+/* align-items: stretch; */
+flex-direction: column;
+
+
+
+}
+.image-section img {
+    width: 65%;
+    height: auto;
+    object-fit: cover;
+    
+    filter: grayscale(100%);
+}
+
+/* Responsive Styles */
+    @media (max-width: 768px) {
+        nav {
+            padding: 10px 20px;
+        }
+    
+        nav ul {
+            flex-direction: column;
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: #000;
+            padding: 20px;
+            border-radius: 10px;
+            width: 200px; /* Set width for mobile menu */
+        }
+    
+        nav ul li {
+            margin: 10px 0;
+        }
+    
+        nav ul.active {
+            display: flex;
+        }
+    
+        nav .menu-toggle {
+            display: block;
+        }
+        .main-section {
+            flex-direction: column;
+            padding: 20px;
+            display: flex;
+        }
+
+        .text-content {
+            max-width: 100%;
+            text-align: center;
+        }
+
+        .text-content h1 {
+            font-size: 2rem;
+        }
+
+        .image-section {
+            width: 100%;
+            height: 100px;
+            margin-top: 50%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .text-content h1 {
+            font-size: 1.5rem;
+        }
+
+        .text-content .circular-text {
+            font-size: 1rem;
+        }
+
+        nav .cta-button {
+            padding: 8px 16px;
+            font-size: 0.9rem;
+        }
+
+        .image-section {
+            height: 250px;
+        }
+    }
+
+
+    @media (max-width: 768px) {
+      
+    }
+    
+    /* Additional mobile adjustments for smaller screens */
+    @media (max-width: 480px) {
+        nav .cta-button {
+            padding: 8px 16px;
+            font-size: 0.9rem;
+        }
+    }

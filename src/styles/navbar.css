@@ -1,0 +1,201 @@
+/* Global Styles */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Container */
+#navbarcotainer {
+    margin:  0px;
+}
+
+#navbar {
+    background-color: rgba(255, 0, 0, 0) !important;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center;
+    padding: 10px 2%;
+    flex-wrap: wrap; /* Allow wrapping for small screens */
+}
+
+/* Responsive Rounded Image */
+.rounded-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.rounded-image:hover {
+    transform: scale(1.1);
+}
+
+/* Brand Name (Wado) */
+#wado {
+    color: white;
+    font-size: clamp(1rem, 2vw, 1.5rem); /* Responsive font size */
+    font-weight: bold;
+}
+
+.me-auto{
+    margin-right: 0px !important;
+}
+
+/* Navigation Links */
+#nav {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Ensures wrapping for smaller screens */
+    gap: 10px;
+    padding: 0 5%;
+    align-items: center;
+    margin-right: 0px;
+    padding-right: 0px;
+}
+
+#Link {
+    background-color: transparent;
+    text-decoration: none;
+    padding: 5px 15px;
+    margin: 0 10px;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+#Link:hover {
+    color: #ffcc00;
+}
+
+#wandopro{
+    background-color: transparent;
+    text-decoration: none;
+    padding: 5px 15px;
+    margin: 0 10px;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease;
+    border: 1px solid white;
+    border-radius: 6px;
+
+}
+#wandopro:hover{
+
+
+    color: #ffcc00;
+
+}
+
+
+#dropdown{
+
+background-color: rgb(17, 37, 16,00);
+
+}
+
+#maindropdown{
+background-color: #ffcc0000;
+
+
+}
+
+
+/* Dropdown Button */
+#dropdown-basic {
+    border: 1px solid white !important;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#dropdown-basic:hover {
+    background-color: rgb(5, 5, 5);
+    /* color:  rgb(5, 5, 5); */
+}
+/* Media Queries for Responsiveness */
+
+/* For tablets (1024px and smaller) */
+@media (max-width: 1024px) {
+    #nav {
+        padding: 0 10%;
+    }
+
+    #navbar {
+        padding: 10px 5%;
+    }
+
+    #Link {
+        margin: 0 5px;
+        padding: 5px 10px;
+    }
+}
+
+/* For mobile screens (768px and smaller) */
+@media (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    #nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .rounded-image {
+        width: 40px;
+        height: 40px;
+    }
+
+    #wado {
+        font-size: 1.2rem;
+    }
+
+    #Link {
+        font-size: 0.9rem;
+        margin: 5px 0;
+    }
+
+    #dropdown-basic {
+        font-size: 0.9rem;
+        padding: 5px 8px;
+    }
+
+    #wandopro {
+        margin-top: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+/* For very small screens (480px and smaller) */
+@media (max-width: 480px) {
+    .rounded-image {
+        width: 35px;
+        height: 35px;
+    }
+
+    #Link {
+        font-size: 0.8rem;
+    }
+
+    #dropdown-basic {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+
+    #wado {
+        font-size: 1rem;
+    }
+}
