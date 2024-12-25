@@ -32,7 +32,7 @@ navigate('/cheat')
         </h1>
         <div className="circular-text">More fun, more focus</div>
 </div><br/>
-<div style={{display:'flex'}}>
+<div id="main_icons" style={{display:'flex'}}>
   
 <br />
 <div id="main">

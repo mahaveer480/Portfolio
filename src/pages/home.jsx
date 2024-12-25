@@ -4,6 +4,7 @@ import '../styles/home.css'
 import mahaveerramani from "../assests/images/downloa110116-removebg-preview.png"
 import textbackground from "../assests/images/text baground.png"
 import MainSection from '../components/mainseaction'
+import Rateme from '../components/rateme'
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
       <Navbar1 />
     
        <MainSection/>
-      
+    <Rateme/>  
     </>
   );
 }

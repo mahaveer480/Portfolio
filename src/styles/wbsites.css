@@ -1,0 +1,73 @@
+/* Website Container */
+#websites {
+    width: 22%;
+    height: 250px;
+    margin: 40px;
+    border: 1px solid white;
+    background-color: rgba(255, 0, 0, 0);
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Keeps the image and h4 stacked vertically */
+    align-items: center;
+    justify-content: flex-end;
+    background-color: rgb(106, 194, 84);
+}
+
+#websites div {
+    margin: 0;
+    padding: 0;
+}
+
+#allwebsites {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto a new line */
+    justify-content: space-around;
+}
+
+
+#websites h4 {
+    background-color: white;
+    color: black;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image Styling */
+#website-images {
+    width: 100%;
+    height: 220px;
+    object-fit: cover; /* Keeps the image aspect ratio intact */
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller devices */
+@media (max-width: 768px) {
+    #websites {
+        width: 45%; /* Adjust width to fit more items per row */
+        margin: 20px;
+    }
+
+    #allwebsites {
+        justify-content: center; /* Center items when space is limited */
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    #websites {
+        width: 90%; /* Take up most of the width on small screens */
+        margin: 10px;
+    }
+
+    #allwebsites {
+        justify-content: center;
+    }
+}

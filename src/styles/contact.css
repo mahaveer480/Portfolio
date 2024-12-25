@@ -1,0 +1,94 @@
+#contacts{
+/* border: 1px solid cornsilk; */
+display: flex;
+flex-direction: column;
+/* justify-content: center; */
+margin: 40px 15%;
+}
+input{
+
+    padding: 10px;
+    height: 30px !important;
+}
+
+#contacts  h1{
+display: flex;
+justify-content: center;
+
+}
+#contacts  p{
+    display: flex;
+    justify-content: center;
+    
+    }
+    #contacts  input{
+        display: flex;
+        justify-content: center;
+        border: none;
+        border-radius: 5px;
+        height: 60px;
+        font-size: larger;
+        margin: 30px;
+        
+        }
+#contacts  div {
+display: flex;
+justify-content: center;
+align-items: center;
+/* margin: 0px !important; */
+
+}            
+
+#contacts  div input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+margin-left: 0px;
+
+width: 65%;
+}
+
+
+#contacts  div button{
+width: 22%;
+height: 50px;
+background-color: #32CD32;
+color: black;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#contacts  div button:hover{
+    background-color: #28A745;
+    transform: scale(1.05);
+
+
+}
+
+@media(max-width:780px){
+
+
+
+    #contacts  div input{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    /* margin-left: 0px; */
+    
+    /* width: 70%; */
+    }
+    
+
+#contacts{
+    
+    
+    margin:  50px 8%;
+    /* background-color: red; */
+
+}
+
+
+}

@@ -6,21 +6,21 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen); // Toggle the menu visibility
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
     <nav>
       <div className="logo">HIRE</div>
-      <ul className={isMenuOpen ? "active" : ""}>
-        <li><a href="/cheat">Chat With Me</a></li>
-        <li><a href="/websites">Websites</a></li>
-        <li><a href="artworks">Art Works</a></li>
-        <li><a href="about">About Us</a></li>
+      <ul  className={isMenuOpen ? "active" : ""}>
+        <li><Link  to="/">Home</Link></li>
+        <li><Link to="/cheat">Chat With Me</Link></li>
+        <li><Link to="/websites">Websites</Link></li>
+        <li><Link  to="/artworks">Art Works</Link></li>
       </ul>
-      <a href="https://www.fiverr.com/s/8zmw6pE"><button className="cta-button" >Start Project</button></a>
-      <div className="menu-toggle" onClick={toggleMenu}>
-        &#9776; {/* Hamburger icon */}
+      <Link target="_main" to="https://www.fiverr.com/s/8zmw6pE"><button className="cta-button" >Start Project</button></Link>
+      <div  className="menu-toggle" onClick={toggleMenu}>
+        &#9776;
       </div>
     </nav>
   );
