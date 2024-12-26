@@ -4,7 +4,7 @@ import '../styles/contact.css'
 import { collection, addDoc } from "firebase/firestore"; 
 import db from '../components/firebase';
 import { useState } from 'react';
-
+import Footer from '../components/footer';
 
 export default function CheatBox() {
 
@@ -63,6 +63,7 @@ I will reply you on your number or email
         </div>
       <p style={{color:"red"}}>{error}</p>
     </div>
+    <Footer/>
     </>
   )
 }

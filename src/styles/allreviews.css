@@ -1,0 +1,99 @@
+/* General styling for the reviews section */
+.reviews-section {
+    /* max-width:; */
+    margin: 30% auto 20px auto ;
+    /* margin: 0px; */
+    /* padding: 0px; */
+    width: 95% !important;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Title styling */
+  .reviews-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+
+  #button-allreviews{
+
+      
+          display: flex;
+          justify-content: flex-end;
+
+  }
+
+
+
+  
+  #add-review{
+border: none;
+background: linear-gradient(to right, #4caf50, #8bc34a);
+color: white;
+border: none;
+border-radius: 8px;
+padding: 0.7rem 1.5rem;
+font-size: 1rem;
+cursor: pointer;
+/* transition: background 0.3s ease; */
+  }
+
+#add-review:hover{
+    background: linear-gradient(to right, #8bc34a, #4caf50);
+}
+ 
+
+
+  .reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Individual review items */
+  .review-item {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  /* Hover effect for review items */
+  .review-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Review header styling */
+  .review-header h3 {
+    font-size: 18px;
+    margin: 0 0 10px;
+    color: #555;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Text content of reviews */
+  .review-item p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+  }
+  
+  /* Empty state message */
+  .reviews-section p {
+    font-size: 16px;
+    text-align: center;
+    color: #999;
+    margin-top: 20px;
+  }
+  

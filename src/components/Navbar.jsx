@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div className="logo">HIRE</div>
+      <div className="logo">HIRE </div>
       <ul  className={isMenuOpen ? "active" : ""}>
         <li><Link  to="/">Home</Link></li>
         <li><Link to="/cheat">Chat With Me</Link></li>

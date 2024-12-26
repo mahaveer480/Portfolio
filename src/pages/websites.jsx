@@ -6,6 +6,7 @@ import todolist from "../assests/images/todolist.png"
 import bloodbank from "../assests/images/blood bank.png"
 import complains from "../assests/images/complains.png"
 import { Link } from 'react-router-dom'
+import Footer from '../components/footer'
 export default function Websites() {
   return (
     <div>
@@ -68,7 +69,7 @@ export default function Websites() {
 </div>
 
 
-
+<Footer/>
     </div>
   )
 }

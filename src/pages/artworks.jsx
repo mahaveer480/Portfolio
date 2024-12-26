@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar1 from '../components/Navbar'
+import Footer from '../components/footer'
 
 export default function Artworks() {
   return (
@@ -7,6 +8,7 @@ export default function Artworks() {
       <Navbar1/>
       <br /><br /><br />
       art works
+      <Footer/>
     </div>
   )
 }

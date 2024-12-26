@@ -7,6 +7,7 @@ import github from "../assests/images/github.png"
 import youtube from "../assests/images/youtube.png"
 import social  from "../assests/images/social.png"
 import linkdin from '../assests/images/linkedin.png'
+import Allrevewes from "./allrevewes";
 
 
 
@@ -83,6 +84,8 @@ navigate('/cheat')
           />
       </div>
     </section>
+
+
     </>
   );
 };

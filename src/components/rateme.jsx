@@ -9,6 +9,7 @@ const Rateme = () => {
   const [comment, setComment] = useState("");
   const [name, setName] = useState("");
   const [data, setData] = useState([]);
+  const [isFormVisible, setIsFormVisible] = useState(true); // State to toggle form visibility
 
   const emotions = [
     { id: 1, label: "Very Happy", icon: <FaRegSmile size={32} />, color: "#4caf50" },
@@ -42,82 +43,72 @@ const Rateme = () => {
       setSelectedEmotion(id);
       setName(name1);
     } else {
-      alert('Please Enter Your Name');
+      alert("Please Enter Your Name");
     }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const docRef = await addDoc(collection(db, "reviews"), {
-        review: selectedEmotion,
-        name: name,
-        comment: comment
-      });
-      console.log("Document written with ID: ", docRef.id);
-      alert("Thank you for your feedback!");
-      fetchReviews();
-    } catch (e) {
-      console.error("Error adding document: ", e);
+    if (!selectedEmotion || !name || !comment) {
+      alert("Please fill out the entire form.");
+    } else {
+      try {
+        await addDoc(collection(db, "reviews"), {
+          review: selectedEmotion,
+          name: name,
+          comment: comment,
+        });
+        fetchReviews();
+        alert("Thank you for your feedback!");
+        setIsFormVisible(false); // Hide the form after submission
+      } catch (e) {
+        console.error("Error adding document: ", e);
+      }
     }
   };
 
   return (
     <div id="feedback-container">
-      {/* Feedback Form */}
-      <div className="feedback-form-container">
-        <h2 className="form-title">Share Your Experience</h2>
-        <p className="form-subtitle">We value your feedback!</p>
+      {isFormVisible ? (
+        <div className="feedback-form-container">
+          <h2 className="form-title">Share Your Experience</h2>
+          <p className="form-subtitle">We value your feedback!</p>
 
-        <div className="feedback-emotions">
-          {emotions.map((emotion) => (
-            <div
-              key={emotion.id}
-              className={`emotion ${selectedEmotion === emotion.id ? "selected" : ""}`}
-              style={{
-                backgroundColor: selectedEmotion === emotion.id ? emotion.color : "#f0f0f0",
-              }}
-              onClick={() => handleEmotionClick(emotion.id)}
-            >
-              {emotion.icon}
-            </div>
-          ))}
-        </div>
-
-        <p className="emotion-label">
-          {selectedEmotion ? emotions.find((e) => e.id === selectedEmotion).label : "Select an emotion"}
-        </p>
-
-        <form className="feedback-form" onSubmit={handleSubmit}>
-          <textarea
-            className="comment-input"
-            placeholder="Add a Comment..."
-            value={comment}
-            onChange={(e) => setComment(e.target.value)}
-          />
-          <button className="submit-button" type="submit">Submit Feedback</button>
-        </form>
-      </div>
-
-      {/* Reviews Section */}
-      {/* <div className="reviews-section">
-        <h2 className="reviews-title">Customer Reviews</h2>
-        {data.length > 0 ? (
-          <div className="reviews-list">
-            {data.map((review, index) => (
-              <div key={index} className="review-item">
-                <div className="review-header">
-                  <h3>{review.name} - {emotions.find((e) => e.id === review.review)?.label}</h3>
-                </div>
-                <p>{review.comment}</p>
+          <div className="feedback-emotions">
+            {emotions.map((emotion) => (
+              <div
+                key={emotion.id}
+                className={`emotion ${selectedEmotion === emotion.id ? "selected" : ""}`}
+                style={{
+                  backgroundColor: selectedEmotion === emotion.id ? emotion.color : "#f0f0f0",
+                }}
+                onClick={() => handleEmotionClick(emotion.id)}
+              >
+                {emotion.icon}
               </div>
             ))}
           </div>
-        ) : (
-          <p>No reviews available yet.</p>
-        )}
-      </div> */}
+
+          <p className="emotion-label">
+            {selectedEmotion ? emotions.find((e) => e.id === selectedEmotion)?.label : ""}
+          </p>
+
+          <form className="feedback-form" onSubmit={handleSubmit}>
+            <textarea
+              className="comment-input"
+              placeholder="Add a Comment..."
+              value={comment}
+              onChange={(e) => setComment(e.target.value)}
+            />
+            <button className="submit-button" type="submit">
+              Submit Feedback
+            </button>
+          </form>
         </div>
+      ) : (
+        <p className="thank-you-message">Thank you for your feedback!</p>
+      )}
+    </div>
   );
 };
 
