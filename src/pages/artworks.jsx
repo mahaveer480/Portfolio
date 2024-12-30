@@ -67,7 +67,8 @@ export default function Artworks() {
         {/* Image Grid */}
         <div className="image-grid">
           {images.length > 0 ? (
-            images.slice(0, 40).map((image, index) => (
+            // Double the images by concatenating the array with itself
+            [...images, ...images].slice(0, 80).map((image, index) => (
               <div key={index} className={`image-box effect-${index % 4} animate`}>
                 <img src={image} alt={`Artwork ${index + 1}`} />
               </div>
