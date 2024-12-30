@@ -11,9 +11,7 @@ import "./styles/home.css";
 function App() {
   return (
     <div>
-<h1>hallow would
-  
-</h1>
+
     <div>
       <Router>
         <Routes>
